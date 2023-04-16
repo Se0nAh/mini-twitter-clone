@@ -6,7 +6,6 @@ interface IForm {
   name: string;
   email: string;
   password: string;
-  avatar: string;
 }
 
 export default () => {
@@ -48,15 +47,6 @@ export default () => {
         </svg>
         <h1 className="text-3xl font-bold mb-8">계정을 생성하세요</h1>
         <form onSubmit={handleSubmit(onValid)} className="space-y-6 flex-1">
-          <div>
-            <input
-              className="py-3 px-1 border rounded w-full"
-              type="text"
-              placeholder={'이름'}
-              {...register("avatar", {required: "이름을 입력해 주세요."})}
-            />
-            <div className="absolute text-xs text-red-400">{errors?.name?.message}</div>
-          </div>
           <div>
             <input
               className="py-3 px-1 border rounded w-full"
