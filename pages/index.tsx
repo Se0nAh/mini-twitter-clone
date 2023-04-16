@@ -53,6 +53,8 @@ const Home: NextPage = () => {
     }
   }, [tweetResult, router]);
 
+  if (!user) return <></>
+
   return (
     <Layout title={"홈"}>
       <div className="px-4 flex bg-white border-b border-gray-100 pb-3 ">
